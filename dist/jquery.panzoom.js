@@ -1161,7 +1161,8 @@
 			this.transition(true);
 
 			// Indicate that we are currently panning
-			this.panning = true;
+			// CUSTOM FIX OF PINCH / ZOOM BEHAVIOUR
+			// this.panning = true;
 
 			// Trigger start event
 			this._trigger('start', event, touches);
