@@ -244,8 +244,10 @@
 		this._buildTransform();
 
 		// Build the appropriately-prefixed transform style property name
-		// De-camelcase
-		this._transform = $.cssProps.transform.replace(rupper, '-$1').toLowerCase();
+		// De-camelcase		
+		// CUSTOM FIX: no $.cssProps as of jquery 3+
+		// this._transform = $.cssProps.transform.replace(rupper, '-$1').toLowerCase();
+		this._transform = 'transform';
 
 		// Build the transition value
 		this._buildTransition();
